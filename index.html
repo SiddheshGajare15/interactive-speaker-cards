@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Speakers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <section class="header-section">
+        <h2>View our Featured Speakers for the Event</h2>
+        <p>Speakers are core contributors and industry thought leaders working at <a href="#">companies</a> that push for innovation.</p>
+    </section>
+
+    <section class="carousel">
+        <button class="carousel-btn left">&lt;</button>
+        <div class="carousel-container" id="carouselContainer">
+            <div class="speaker-card" onclick="showSpeakerInfo('Siddhesh Gajare', 'Chief Marketing Officer', 'Acme Corp', './assets/img1.jfif', 'Siddhesh Gajare is a dynamic and innovative marketing leader with over 10 years of experience in driving impactful strategies. His leadership at Acme Corp has brought a fresh perspective to the digital marketing industry.')">
+                <img src="./assets/profile.jpg" alt="Siddhesh Gajare">
+                <h3>Siddhesh Gajare</h3>
+                <p>Chief Marketing Officer</p>
+                <span>Acme Corp</span>
+            </div>
+            <div class="speaker-card" onclick="showSpeakerInfo('John Smith', 'Chief Engagement Officer', 'Acquia', './assets/img2.jfif', 'John Smith is a seasoned professional known for his exceptional ability to foster meaningful customer engagement strategies, transforming Acquia into a leader in customer-centric solutions.')">
+                <img src="./assets/img2.jfif" alt="John Smith">
+                <h3>John Smith</h3>
+                <p>Chief Engagement Officer</p>
+                <span>Acquia</span>
+            </div>
+            <div class="speaker-card" onclick="showSpeakerInfo('Jane Smith', 'Chief Technical Developer', 'Pantheon', './assets/img3.jfif', 'Jane Smith is a highly skilled technical expert leading development teams at Pantheon. She is passionate about scalable, high-performance technologies that redefine the web development landscape.')">
+                <img src="./assets/img3.jfif" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>Chief Technical Developer</p>
+                <span>Pantheon</span>
+            </div>
+            <div class="speaker-card" onclick="showSpeakerInfo('Michael Lee', 'Chief Marketing Officer', 'Specbee', './assets/img4.jfif', 'Michael Lee has driven Specbee’s marketing initiatives, combining creative vision with practical application to build a strong market presence and customer loyalty.')">
+                <img src="./assets/img4.jfif" alt="Michael Lee">
+                <h3>Michael Lee</h3>
+                <p>Chief Marketing Officer</p>
+                <span>Specbee</span>
+            </div>
+            <div class="speaker-card" onclick="showSpeakerInfo('Sarah Connor', 'Chief Technology Officer', 'Innovatech', './assets/img5.jfif', 'Sarah Connor is known for her technological leadership at Innovatech. Her work focuses on integrating AI and machine learning into business solutions, driving transformative change.')">
+                <img src="./assets/img2.jfif" alt="Sarah Connor">
+                <h3>Sarah Connor</h3>
+                <p>Chief Technology Officer</p>
+                <span>Innovatech</span>
+            </div>
+            <div class="speaker-card" onclick="showSpeakerInfo('David Williams', 'Lead Developer', 'Techies', './assets/img2.jfif', 'David Williams is the driving force behind Techies’ development team. He specializes in cutting-edge software solutions and takes pride in delivering innovative products on time.')">
+                <img src="./assets/img5.jfif" alt="David Williams">
+                <h3>David Williams</h3>
+                <p>Lead Developer</p>
+                <span>Techies</span>
+            </div>
+        </div>
+        <button class="carousel-btn right">&gt;</button>
+    </section>
+
+    <section class="modal" id="speakerModal">
+        <div class="modal-header">
+            <button class="modal-close-btn" onclick="closeModal()">X</button>
+        </div>
+        <div class="modal-content">
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Speaker Image">
+            </div>
+            <div class="modal-info">
+                <div class="speaker-details">
+                    <p id="modalName">Siddhesh Gajare</p>
+                    <p id="modalTitle">Chief Marketing Officer</p>
+                    <span id="modalCompany">Acme Corp</span>
+                </div>
+                <div class="separator"></div>
+                <div class="modal-description">
+                    <p id="modalDescription">Speaker is a dynamic and innovative marketing leader with over 10 years of experience in driving impactful strategies. His leadership at Acme Corp has brought a fresh perspective to the digital marketing industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <button class="cta-button">See the Program</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

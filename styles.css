@@ -1,0 +1,295 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-section h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-section p {
+  font-size: 1.125rem;
+  color: black;
+}
+
+.header-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: margin-top 0.5s ease;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.speaker-card {
+  flex: 0 0 285px;
+  height: 321px;
+  margin: 0 8px;
+  padding: 36px 21px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: scale(1.05);
+}
+
+.speaker-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.speaker-card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.speaker-card p {
+  font-size: 1.125rem;
+  color: black;
+}
+
+.speaker-card span {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Carousel navigation buttons */
+.carousel-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.carousel-btn.left {
+  left: -1rem;
+}
+
+.carousel-btn.right {
+  right: -1rem;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-content {
+  display: flex;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-image {
+  flex: 0 0 150px;
+  margin-right: 2rem;
+}
+
+.modal-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.modal-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.speaker-details {
+  flex: 0.4;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-info p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.modal-info span {
+  font-size: 1rem;
+  color: #999;
+}
+
+#modalName {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+}
+
+#modalTitle {
+  color: black;
+  font-size: 1.125rem;
+}
+
+#modalCompany {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Vertical line separator */
+.vertical-line {
+  border-left: 2px solid #ddd;
+  height: 100%;
+  margin: 0 2rem;
+}
+
+/* Modal description styles */
+.modal-description {
+  flex: 1;
+  font-size: 1.125rem;
+  border-left: 1px solid #B7B7B7;
+  padding: 1.5rem;
+  text-wrap: wrap;
+}
+
+.modal-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Carousel modal-open state */
+.carousel.modal-open {
+  margin-top: 350px;
+}
+
+/* Call-to-action section */
+.cta-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+  }
+
+  .speaker-card {
+    flex: 0 0 100%;
+    margin: 10px 0;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-image,
+  .speaker-details {
+    margin-bottom: 1rem;
+  }
+
+  .modal-description {
+    padding: 1rem;
+  }
+
+  .cta-section {
+    margin-top: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
+}
