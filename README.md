@@ -14,7 +14,7 @@ This project is a simple HTML, CSS, and JavaScript implementation of a carousel 
 
 ## Demo
 
-You can check out the live demo of the project. (https://your-username.github.io/interactive-speaker-cards/).
+You can check out the live demo of the project. (https://github.com/SiddheshGajare15/interactive-speaker-cards).
 
 
 
